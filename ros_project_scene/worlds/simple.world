@@ -1,0 +1,297 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.8">
+  <world name="default">
+
+  <!-- ================= TRACK ================= -->
+<!-- ================= TRACK (EXTENDED SEGMENTS) ================= -->
+<model name="track">
+  <static>true</static>
+
+  <!-- SEGMENT 1 -->
+  <link name="seg1">
+    <pose>0 0 0 0 0 0</pose>
+    <collision name="collision">
+      <geometry><box><size>21 4 0.1</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>21 4 0.1</size></box></geometry>
+    </visual>
+  </link>
+
+  <!-- SEGMENT 2 -->
+  <link name="seg2">
+    <pose>10.5 8 0 0 0 1.57</pose>
+    <collision name="collision">
+      <geometry><box><size>17 2 0.1</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>17 2 0.1</size></box></geometry>
+    </visual>
+  </link>
+
+  <!-- SEGMENT 3 -->
+  <link name="seg3">
+    <pose>0 16 0 0 0 3.14</pose>
+    <collision name="collision">
+      <geometry><box><size>21 3 0.1</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>21 3 0.1</size></box></geometry>
+    </visual>
+  </link>
+
+  <!-- SEGMENT 4 -->
+  <link name="seg4">
+    <pose>-10.5 8 0 0 0 -1.57</pose>
+    <collision name="collision">
+      <geometry><box><size>17 2.5 0.1</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>17 2.5 0.1</size></box></geometry>
+    </visual>
+  </link>
+</model>
+
+<!-- ================= END TRACK ================= -->
+
+<!-- ================= INNER FENCES (SHORTER) ================= -->
+<!-- ================= INNER FENCES (SHORTER, VALID SDF) ================= -->
+<model name="fences_inner">
+  <static>true</static>
+
+  <!-- SEGMENT 1 -->
+  <link name="inner_s1">
+    <pose>0 2.15 0.25 0 0 0</pose>
+    <collision name="collision">
+      <geometry><box><size>19 0.1 0.5</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>19 0.1 0.5</size></box></geometry>
+      <material>
+        <ambient>0.25 0 0 1</ambient>
+        <diffuse>0.35 0 0 1</diffuse>
+        <specular>0.05 0.05 0.05 1</specular>
+      </material>
+    </visual>
+  </link>
+
+  <!-- SEGMENT 2 -->
+  <link name="inner_s2">
+    <pose>9.5 8.15 0.25 0 0 1.57</pose>
+    <collision name="collision">
+      <geometry><box><size>14 0.1 0.5</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>14 0.1 0.5</size></box></geometry>
+      <material>
+        <ambient>0.25 0 0 1</ambient>
+        <diffuse>0.35 0 0 1</diffuse>
+        <specular>0.05 0.05 0.05 1</specular>
+      </material>
+    </visual>
+  </link>
+
+  <!-- SEGMENT 3 -->
+  <link name="inner_s3">
+    <pose>0 14.65 0.25 0 0 3.14</pose>
+    <collision name="collision">
+      <geometry><box><size>19 0.1 0.5</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>19 0.1 0.5</size></box></geometry>
+      <material>
+        <ambient>0.25 0 0 1</ambient>
+        <diffuse>0.35 0 0 1</diffuse>
+        <specular>0.05 0.05 0.05 1</specular>
+      </material>
+    </visual>
+  </link>
+
+  <!-- SEGMENT 4 -->
+  <link name="inner_s4">
+    <pose>-8.5 7.85 0.25 0 0 -1.57</pose>
+    <collision name="collision">
+      <geometry><box><size>14 0.1 0.5</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>14 0.1 0.5</size></box></geometry>
+      <material>
+        <ambient>0.25 0 0 1</ambient>
+        <diffuse>0.35 0 0 1</diffuse>
+        <specular>0.05 0.05 0.05 1</specular>
+      </material>
+    </visual>
+  </link>
+
+</model>
+
+
+<!-- ================= END INNER FENCES ================= -->
+<!-- ================= OUTER FENCES (LONGER & WIDER) ================= -->
+
+<!-- ================= OUTER FENCES (LONGER & WIDER, VALID SDF) ================= -->
+<model name="fences_outer">
+  <static>true</static>
+
+  <!-- SEGMENT 1 -->
+  <link name="outer_s1">
+    <pose>0 -2.05 0.25 0 0 0</pose>
+    <collision name="collision">
+      <geometry><box><size>26 0.1 0.5</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>26 0.1 0.5</size></box></geometry>
+      <material>
+        <ambient>0.25 0 0 1</ambient>
+        <diffuse>0.35 0 0 1</diffuse>
+        <specular>0.05 0.05 0.05 1</specular>
+      </material>
+    </visual>
+  </link>
+
+  <!-- SEGMENT 2 -->
+  <link name="outer_s2">
+    <pose>11.5 6.45 0.25 0 0 1.57</pose>
+    <collision name="collision">
+      <geometry><box><size>22 0.1 0.5</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>22 0.1 0.5</size></box></geometry>
+      <material>
+        <ambient>0.25 0 0 1</ambient>
+        <diffuse>0.35 0 0 1</diffuse>
+        <specular>0.05 0.05 0.05 1</specular>
+      </material>
+    </visual>
+  </link>
+
+  <!-- SEGMENT 3 -->
+  <link name="outer_s3">
+    <pose>0 16.95 0.25 0 0 3.14</pose>
+    <collision name="collision">
+      <geometry><box><size>26 0.1 0.5</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>26 0.1 0.5</size></box></geometry>
+      <material>
+        <ambient>0.25 0 0 1</ambient>
+        <diffuse>0.35 0 0 1</diffuse>
+        <specular>0.05 0.05 0.05 1</specular>
+      </material>
+    </visual>
+  </link>
+
+  <!-- SEGMENT 4 -->
+  <link name="outer_s4">
+    <pose>-11.5 8.55 0.25 0 0 -1.57</pose>
+    <collision name="collision">
+      <geometry><box><size>22 0.1 0.5</size></box></geometry>
+    </collision>
+    <visual name="visual">
+      <geometry><box><size>22 0.1 0.5</size></box></geometry>
+      <material>
+        <ambient>0.25 0 0 1</ambient>
+        <diffuse>0.35 0 0 1</diffuse>
+        <specular>0.05 0.05 0.05 1</specular>
+      </material>
+    </visual>
+  </link>
+
+</model>
+
+
+<!-- ================= END FENCES ================= -->
+
+
+<!-- ================= START/FINISH BOARD  ================= -->
+<model name="start_finish_board">
+  <static>true</static>
+
+  <link name="board">
+    <!-- yaw = 1.5708 rad => 90° around Z -->
+    <pose>0 0 3 0 0 1.5708</pose>
+
+    <!-- board body -->
+    <collision name="collision">
+      <geometry><box><size>4 0.15 1</size></box></geometry>
+    </collision>
+
+    <visual name="board_visual">
+      <geometry><box><size>4 0.15 1</size></box></geometry>
+      <material>
+        <ambient>0 0.25 0 1</ambient>
+        <diffuse>0 0.35 0 1</diffuse>
+        <specular>0.05 0.05 0.05 1</specular>
+      </material>
+    </visual>
+
+
+  </link>
+</model>
+<!-- ================= END START/FINISH BOARD ================= -->
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+
+    <plugin 
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
